@@ -1,10 +1,10 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
   background: #bbbbbb;
-  padding: 20px 0;
+  padding: 1em 2em 0 2em;
 }
 
 .caixa {
@@ -37,8 +37,10 @@ nav a {
 }
 
 .principal {
-  margin: 0 0 1em;
-  padding: 30px;
+  width: 940px;
+  margin: 0 auto;
+  padding: 3em 0;
+  background: #fefefe;
 }
 
 .principal strong {
@@ -65,11 +67,48 @@ nav a {
 
 .mapa {
   padding: 3em 0;
-  margin: 0 3em 0 3em;
+  background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa-conteudo {
+  width: 940px;
+  margin: 0 auto;
 }
 
 .mapa p {
   margin: 0 0 2em;
+}
+
+.beneficios {
+  padding: 3em 0;
+  background: #888888;
+}
+
+.conteudo-beneficios {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.lista-beneficios {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.imagem-beneficios {
+  width: 50%;
+  opacity: 1;
+  transition: 400ms;
+  box-shadow: 10px 10px 15px black;
+}
+
+.imagem-beneficios:hover {
+  opacity: 0.3;
+}
+
+.video {
+  width: 560px;
+  margin: 2em auto;
 }
 
 p {
@@ -77,30 +116,18 @@ p {
   font-size: 18px;
 }
 
-em strong {
-  color: red;
-}
-
 .itens {
+  line-height: 1.5;
   font-style: italic;
+  font-weight: lighter;
+}
+
+.itens:first-child {
   font-weight: bold;
-  font-size: large;
 }
 
-.beneficios {
-  background: #ffffff;
-  padding: 20px;
-}
-
-.lista-principal {
-  display: inline-block;
-  vertical-align: top;
-  width: 20%;
-  margin-right: 15%;
-}
-
-.imagembeneficios {
-  width: 60%;
+.itens:before {
+  content: '★';
 }
 
 footer {
@@ -112,5 +139,25 @@ footer {
 .Copyright {
   color: white;
   font-size: 13px;
-  margin-top: 20px;
+  margin-top: 20px 0 0;
+}
+
+@media screen and (max-width: 480px) {
+  .caixa,
+  .principal,
+  .conteudo-beneficios,
+  .mapa-conteudo,
+  .video {
+    width: auto;
+  }
+  h1 {
+    text-align: center;
+  }
+  nav {
+    position: static;
+  }
+  .lista-beneficios,
+  .imagem-beneficios {
+    width: 100%;
+  }
 }
